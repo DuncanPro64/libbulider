@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2021 at 07:22 PM
+-- Generation Time: May 01, 2021 at 05:07 AM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -77,9 +77,9 @@ CREATE TABLE IF NOT EXISTS `article` (
 INSERT INTO `article` (`count_id`, `article_id`, `title`, `subject`, `description`, `date_published`, `profile_pic`, `status`, `source_name`, `written_at`, `likes`) VALUES
 (2, 'P0087', 'test1', 'complain', 'Describe your project', '2021-04-11', 'Screenshot (2).png', 'finished', 'test.txt', '2021-04-11 22:05:50', 0),
 (3, 'P0087', 'test1', 'complain', 'Describe your project', '2021-04-11', 'Screenshot (2).png', 'finished', 'test.txt', '2021-04-11 22:08:01', 0),
-(5, 'P0087', 'Emmanuel', 'testing', 'Describe your project', '2021-04-15', 'manu.jpg', 'finished', 'test.txt', '2021-04-15 17:31:56', 0),
+(5, 'P0087', 'Emmanuel', 'testing', 'Describe your project', '2021-04-15', 'Screenshot (2).png', 'finished', 'test.txt', '2021-04-15 17:31:56', 0),
 (10, 'P0087', 'test1', 'complain', 'Describe your project', '2021-04-23', 'libhome.png', 'finished', 'test.txt', '2021-04-23 14:36:56', 0),
-(11, 'P0087', 'test1', 'TESTING', 'Describe your Article', '2021-04-23', 'Duncan1.png', 'finished', 'test.txt', '2021-04-23 14:47:59', 0);
+(11, 'P0087', 'test1', 'TESTING', 'Describe your Article', '2021-04-23', 'Screenshot (2).png', 'finished', 'test.txt', '2021-04-23 14:47:59', 0);
 
 -- --------------------------------------------------------
 
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `commented_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` varchar(11) NOT NULL,
   PRIMARY KEY (`count_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=491 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=495 ;
 
 --
 -- Dumping data for table `comment`
@@ -254,7 +254,11 @@ INSERT INTO `comment` (`count_id`, `comment_id`, `subject`, `description`, `emai
 (487, 'NC146C', '', '', '', '', '', '', '2021-04-29 11:36:49', ''),
 (488, 'NC147C', '', '', '', '', '', '', '2021-04-30 14:18:48', ''),
 (489, 'NC148C', '', '', '', '', '', '', '2021-04-30 17:00:53', ''),
-(490, 'NC149C', '', '', '', '', '', '', '2021-04-30 17:01:37', '');
+(490, 'NC149C', '', '', '', '', '', '', '2021-04-30 17:01:37', ''),
+(491, 'NC150C', '', '', '', '', '', '', '2021-04-30 22:25:51', ''),
+(492, 'NC151C', '', '', '', '', '', '', '2021-04-30 22:26:28', ''),
+(493, 'NC152C', '', '', '', '', '', '', '2021-05-01 08:00:18', ''),
+(494, 'NC153C', '', '', '', '', '', '', '2021-05-01 08:00:23', '');
 
 -- --------------------------------------------------------
 
@@ -273,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `longitude` double NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`rawcust_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=95 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=98 ;
 
 --
 -- Dumping data for table `customer`
@@ -370,7 +374,10 @@ INSERT INTO `customer` (`rawcust_id`, `email_address`, `phone_number`, `first_na
 (91, 'mulongodancan25@gmail.com', '000', 'Duncan', 'Nyongesa', 'kitale', 1.0190848, 35.0060544, '2021-04-29 10:29:36'),
 (92, 'mulongodancan25@gmail.com', '7788', 'Duncan', 'Nyongesa', 'kitale', 1.0190848, 0, '2021-04-29 11:06:42'),
 (93, 'mulongodancan95@gmail.com', '56', 'Dominic', 'Dans', 'kitale', 0, 0, '2021-04-29 18:44:48'),
-(94, 'mulongodancan85@gmail.com', '0714757251', 'Duncan', 'Nyongesa', 'kitale', 0, 0, '2021-04-30 17:01:33');
+(94, 'mulongodancan85@gmail.com', '0714757251', 'Duncan', 'Nyongesa', 'kitale', 0, 0, '2021-04-30 17:01:33'),
+(95, 'mulongodancan875@gmail.com', '889', 'Duncan', 'Nyongesa', 'kitale', -1.2877824, 36.8345088, '2021-04-30 22:26:23'),
+(96, 'mulongodancan25@gmail.com', '88999', 'Duncan', 'Nyongesa', 'kitale', -1.2877824, 36.8345088, '2021-04-30 22:27:24'),
+(97, 'manu@gmail.com', '8899', 'Duncan', 'Nyongesa', 'kitale', -1.2877824, 36.8345088, '2021-04-30 22:30:21');
 
 -- --------------------------------------------------------
 
@@ -444,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `hire` (
   PRIMARY KEY (`rawhir_id`),
   KEY `rawequ_id` (`rawequ_id`),
   KEY `rawcust_id` (`rawcust_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `hire`
@@ -453,7 +460,9 @@ CREATE TABLE IF NOT EXISTS `hire` (
 INSERT INTO `hire` (`rawhir_id`, `rawcust_id`, `hire_id`, `rawequ_id`, `hire_number`, `total_price`, `date_hired`, `deadline`, `status`, `hired_at`) VALUES
 (4, 'mulongodancan25@gmai', '232021 /_48502', '30', 'N_232021 /2', '676', '2021-04-23', '2021-04-09', 'complete', '2021-04-23 18:16:31'),
 (3, 'mulongodancan25@gmai', '192021 /_50501', '29', 'N_192021 /1', '60166', '2021-04-20', '2021-04-20', 'complete', '2021-04-19 16:31:56'),
-(5, 'mulongodancan25@gmai', '242021 /_12683', '26', 'N_242021 /3', '4056', '2021-04-24', '2021-04-22', 'complete', '2021-04-24 20:25:56');
+(5, 'mulongodancan25@gmai', '242021 /_12683', '26', 'N_242021 /3', '4056', '2021-04-24', '2021-04-22', 'complete', '2021-04-24 20:25:56'),
+(7, 'mulongodancan25@gmail.com', '302021 /_57694', '33', 'N_302021 /4', '6033522', '2021-04-30', '2021-04-16', 'incomplete', '2021-04-30 22:27:24'),
+(8, 'manu@gmail.com', '302021 /_39175', '33', 'N_302021 /5', '527484', '2021-04-30', '2021-04-30', 'incomplete', '2021-04-30 22:30:21');
 
 -- --------------------------------------------------------
 
@@ -513,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `material` (
 
 INSERT INTO `material` (`rawmat_id`, `material_id`, `category_id`, `material_name`, `quantity`, `unit_price`, `profile_pic`, `status`, `description`, `registered_at`) VALUES
 (18, 'P0087', '5', 'cement', '261', '3343', 'Screenshot (2).png', 'active', 'Describe your projec', '2021-04-04 09:50:03'),
-(17, 'P0087', '7', 'metal', '141', '3434', 'room2.jpeg', 'active', 'Describe your projec', '2021-04-04 09:49:46'),
+(17, 'P0087', '7', 'metal', '63', '3434', 'room2.jpeg', 'active', 'Describe your projec', '2021-04-04 09:49:46'),
 (16, 'P0087', '7', 'sand', '6205', '343', 'colored houses.jpg', '', 'Describe your projec', '2021-04-04 09:49:18');
 
 -- --------------------------------------------------------
@@ -557,7 +566,7 @@ CREATE TABLE IF NOT EXISTS `myorder` (
   PRIMARY KEY (`raword_id`),
   KEY `rawcust_id` (`email_address`),
   KEY `rawmat_id` (`rawmat_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `myorder`
@@ -565,7 +574,8 @@ CREATE TABLE IF NOT EXISTS `myorder` (
 
 INSERT INTO `myorder` (`raword_id`, `email_address`, `order_id`, `rawmat_id`, `order_number`, `order_date`, `quantity`, `total_price`, `paid`, `status`, `ordered_at`) VALUES
 (55, 'mulongodancan25@gmail.com', '27202182081', '18', 'N2720211', '2021-04-27', 10000, '20058', '60174', 'complete', '2021-04-27 13:02:55'),
-(57, 'mulongodancan85@gmail.com', '30202191042', '16', 'N3020212', '2021-04-30', 6, '2058', '2058', 'complete', '2021-04-30 17:01:33');
+(57, 'mulongodancan85@gmail.com', '30202191042', '16', 'N3020212', '2021-04-30', 6, '2058', '2058', 'complete', '2021-04-30 17:01:33'),
+(58, 'mulongodancan875@gmail.com', '30202154373', '17', 'N3020213', '2021-04-30', 78, '267852', '', 'incomplete', '2021-04-30 22:26:23');
 
 -- --------------------------------------------------------
 
