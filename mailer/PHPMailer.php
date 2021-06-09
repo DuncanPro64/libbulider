@@ -164,7 +164,7 @@ class PHPMailer
      *
      * @var string[]
      */
-    protected static $IcalMethods=[
+    protected static $IcalMethods = [
         self::ICAL_METHOD_REQUEST,
         self::ICAL_METHOD_PUBLISH,
         self::ICAL_METHOD_REPLY,
@@ -172,7 +172,7 @@ class PHPMailer
         self::ICAL_METHOD_CANCEL,
         self::ICAL_METHOD_REFRESH,
         self::ICAL_METHOD_COUNTER,
-        self::ICAL_METHOD_DECLINECOUNTER;
+        self::ICAL_METHOD_DECLINECOUNTER,
     ];
 
     /**
