@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 //include 'static.php';
-  $db = mysqli_connect('localhost', 'root', '', 'libbuider');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuider');
   
   //initilalize variables
   $count_id=0;

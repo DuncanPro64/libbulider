@@ -9,13 +9,13 @@ $password = addslashes($password);
 $username = mysqli_real_escape_string($con,$username);
 $password = mysqli_real_escape_string($con,$password);
 
-$query = "SELECT * FROM admin WHERE username='$username' AND password='$password' LIMIT 1";
+$query = "SELECT * FROM admin WHERE username='$username' AND password='$password' LIMIT 4";
 			$results = mysqli_query($con, $query);
 
 			if (mysqli_num_rows($results) == 1) { // user found
 				// check if user is admin or user
 				$logged_in_user = mysqli_fetch_assoc($results);
-				if ($logged_in_user['role'] == 'admin') {
+				if ($logged_in_user['role'] == 'SuperAdmin' or 'admin') {
 
 					$_SESSION['user'] = $logged_in_user;
 					$_SESSION['success']  = "You are now logged in";

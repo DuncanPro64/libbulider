@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-  $db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   $query5 = mysqli_query($db, "select count(status) as total from comment where status='UNREAD'");
 $result5 = mysqli_fetch_array($query5);
    //header('location:home.php');

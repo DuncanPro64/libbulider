@@ -8,7 +8,7 @@ else{
   
 }
 
-  $con = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $con = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   $query= mysqli_query($con, "select count(*) as total from myorder");
 $result1 = mysqli_fetch_array($query);
  //$order4=mysqli_query($con ,"DELETE FROM myorder WHERE  status='complete'");

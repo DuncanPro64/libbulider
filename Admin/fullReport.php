@@ -2,7 +2,7 @@
 session_start();
 
 
-  $db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   
  
    
@@ -133,7 +133,7 @@ End Date:  <?php  echo $to ?><br>
              <td><?php echo $row['material_name']; ?></td>
             <td><?php echo $row['unit_price']; ?>.00</td>
              <td><?php echo '500.00' ?></td>
-              <td><?php echo ($row['total_price']) +$row['balance']; ?>.00</td>
+              <!--td><?php echo ($row['total_price']) +$row['balance']; ?>.00</td>-->
               <td><?php echo $row['rawcust_id']; ?></td>
                <td><?php echo $row['transaction_date']; ?></td>
                  <td><?php echo $row['transaction_number']; ?></td>
@@ -141,7 +141,7 @@ End Date:  <?php  echo $to ?><br>
 
              </tr>
                     <?php $expenditure+=($row['quantity'] * $row['unit_price']);
-                          $total_price+=($row['total_price'] +$row['balance']);
+                         // $total_price+=($row['total_price'] +$row['balance']);
 
                      ?>
            <?php }?>

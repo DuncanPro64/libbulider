@@ -75,20 +75,9 @@
  
 
  <a href='orderexecute.php?material_id=<?php echo $service_Id ?>' class="btn btn-info btn-block my-4"  >  ORDER</a>
+</div> 
 </div>
- 
-
-
-
-   
-</div>
-
-
-
 </form>
-
-
-
 </div>
 </div>
 </div>

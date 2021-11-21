@@ -10,7 +10,7 @@ include "../User/static.php";
 	$username=$id;
 
     $update=true;
-    $con= new mysqli('localhost','root', '', 'libbuilder');
+    $con= new mysqli('localhost','root', '@Dun0714757251', 'libbuilder');
     $result = mysqli_query($con, "SELECT * FROM admin where username='$username'");
         while($row = mysqli_fetch_array($result))
             {

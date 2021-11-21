@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 
 
 
-  $db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   $query= mysqli_query($db, "select count(*) as total from material");
 $result1 = mysqli_fetch_array($query);
 
@@ -293,11 +293,11 @@ function Clickheretoprint()
   
 
 </script>
-   <script type="text/javascript" src="add/js/jquery.min.js"></script>
-   <script type="text/javascript" src="add/js/popper.min.js"></script>
-    <script type="text/javascript" src="add/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="add/js/mdb.min.js"></script>
-    <script type="text/javascript" src="add/js/app.js"></script>
+   <script type="text/javascript" src="../add/js/jquery.min.js"></script>
+   <script type="text/javascript" src="../add/js/popper.min.js"></script>
+    <script type="text/javascript" src="../add/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../add/js/mdb.min.js"></script>
+    <script type="text/javascript" src="../add/js/app.js"></script>
 
 
 

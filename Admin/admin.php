@@ -4,7 +4,7 @@ include'loginExec.php';
  if (!isset($_SESSION['user'])) {
   header("Location: ../User/homepage.php");
 }
-$dbhandle= new mysqli('localhost','root', '', 'libbuilder');
+$dbhandle= new mysqli('localhost','root', '@Dun0714757251', 'libbuilder');
 
 $query= "SELECT *FROM material";
 $res1=$dbhandle->query($query);
@@ -318,7 +318,7 @@ while($row1=$pop10->fetch_assoc()){
 
         <?php
 
-$db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+$db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
 $query = mysqli_query($db, "SELECT * FROM admin where username='$username'");
 $ress = mysqli_fetch_array($query);
 

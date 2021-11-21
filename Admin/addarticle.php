@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-  $db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   $query= mysqli_query($db, "select count(*) as total from article");
 $result1 = mysqli_fetch_array($query);
 
