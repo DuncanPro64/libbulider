@@ -8,7 +8,7 @@ else{
   
 }
 //include 'static.php';
-  $con = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $con = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
   $query= mysqli_query($con, "select count(*) as total from transaction");
 $result1 = mysqli_fetch_array($query);
 

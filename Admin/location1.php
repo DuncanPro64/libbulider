@@ -5,9 +5,11 @@ if (!isset($_SESSION['user'])) {
   header("Location: ../User/homepage.php");
 }
 $id=$_GET['service_Id'];
-$dbhandle= new mysqli('localhost','root', '', 'libbuilder');
+$dbhandle= new mysqli('localhost','root', '@Dun0714757251', 'libbuilder');
 $query= "SELECT *FROM customer WHERE email_address='$id' GROUP BY email_address";
 $rer=$dbhandle->query($query);
+$latitude= -33.840282;
+$longitude= 151.207474;
 while($rr=mysqli_fetch_array($rer)){
     ?>
 
@@ -26,9 +28,11 @@ $today=date("F j, Y /",time());
 //calculating the distance
 function getDistance($addressFrom, $addressTo,$unit=''){
 	$id=$_GET['service_Id'];
-	$dbhandle= new mysqli('localhost','root', '', 'libbuilder');
+	$dbhandle= new mysqli('localhost','root', '@Dun0714757251', 'libbuilder');
 $query= "SELECT *FROM customer WHERE email_address='$id' GROUP BY email_address DESC LIMIT 1";
 $rer=$dbhandle->query($query);
+$latitude= -33.840282;
+$longitude= 151.207474;
 while($rr=mysqli_fetch_array($rer)){
     ?>
 

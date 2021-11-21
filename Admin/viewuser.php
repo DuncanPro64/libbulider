@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-  $db = mysqli_connect('localhost', 'root', '', 'libbuilder');
+  $db = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
    //header('location:home.php');
    
 ?>
@@ -38,7 +38,11 @@ if (!isset($_SESSION['user'])) {
 <?php endif ?>
 <?php 
 $count = 1;
-$result=mysqli_query($db,"SELECT *FROM customer GROUP BY email_address DESC"); ?>
+$sql = "select * from customer";
+$result = mysqli_query($db,$sql);
+
+
+ ?>
 <style type="text/css">
   tr:nth-child(even){
   background-color: #f2f2f2;

@@ -4,7 +4,7 @@ include'loginExec.php';
 if (!isset($_SESSION['user'])) {
   header("Location: ../User/homepage.php");
 }
- $con = mysqli_connect('localhost', 'root', '', 'libbuilder');
+ $con = mysqli_connect('localhost', 'root', '@Dun0714757251', 'libbuilder');
 
 
 
